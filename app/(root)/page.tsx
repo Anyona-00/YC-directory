@@ -21,7 +21,7 @@ import SearchForm from "@/components/SearchForm";
     description: "This is a startup idea",
     image:
       "https://ausmed-images.s3.ap-southeast-2.amazonaws.com/ausmed.com/ausmed-articles/20191127_cover_v2.1.jpg",
-    category: "robotss",
+    category: "robots",
     title: "Startup Idea",
   },
 ];*/
