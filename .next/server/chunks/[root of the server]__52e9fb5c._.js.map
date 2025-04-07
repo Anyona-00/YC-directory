@@ -1,8 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
-    {"offset": {"line": 110, "column": 0}, "map": {"version":3,"sources":["file:///home/anyona/Desktop/Programming/Nextjs/yc_directory1/auth.ts"],"sourcesContent":["import NextAuth from \"next-auth\"\nimport GithubProvider from \"next-auth/providers/github\"\n\nexport const { handlers, signIn, signOut, auth } = NextAuth({\n  providers: [\n    GithubProvider({\n      clientId: process.env.AUTH_GITHUB_ID,\n      clientSecret: process.env.AUTH_GITHUB_SECRET,\n    }),\n  ],\n  secret: process.env.AUTH_SECRET,\n})"],"names":[],"mappings":";;;;;;AAAA;AAAA;AACA;AAAA;;;AAEO,MAAM,EAAE,QAAQ,EAAE,MAAM,EAAE,OAAO,EAAE,IAAI,EAAE,GAAG,CAAA,GAAA,uJAAA,CAAA,UAAQ,AAAD,EAAE;IAC1D,WAAW;QACT,CAAA,GAAA,uJAAA,CAAA,UAAc,AAAD,EAAE;YACb,UAAU,QAAQ,GAAG,CAAC,cAAc;YACpC,cAAc,QAAQ,GAAG,CAAC,kBAAkB;QAC9C;KACD;IACD,QAAQ,QAAQ,GAAG,CAAC,WAAW;AACjC","debugId":null}},
-    {"offset": {"line": 137, "column": 0}, "map": {"version":3,"sources":["file:///home/anyona/Desktop/Programming/Nextjs/yc_directory1/app/api/auth/%5B...nextauth%5D/route.ts"],"sourcesContent":["import { handlers } from \"@/auth\" // Referring to the auth.ts we just created\nexport const { GET, POST } = handlers"],"names":[],"mappings":";;;;AAAA,oLAAkC,2CAA2C;;AACtE,MAAM,EAAE,GAAG,EAAE,IAAI,EAAE,GAAG,sGAAA,CAAA,WAAQ","debugId":null}}]
-}
