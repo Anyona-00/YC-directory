@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { signIn, signOut, auth } from "@/auth"; // I  mporting the signIn and signOut functions
+import { signIn, signOut, auth } from "@/auth";
+// Importing the signIn and signOut functions
 
 // Define server actions outside the component
 async function handleSignIn() {
