@@ -20,13 +20,13 @@ const Navbar = async () => {
   const session = await auth();
 
   return (
-    <header className=" px-5 py-3 bg-yellow-400 shadow-sm">
+    <header className=" px-5 py-3 shadow-sm">
       <nav className="flex justify-between items-center">
         <Link href="/" className="flex items-center">
           <Image src="/logo.png" alt="Logo" width={144} height={30} />
         </Link>
 
-        <div className="flex items-center gap-5">
+        <div className="flex items-center bg-yellow-400 gap-5">
           {session && session?.user ? (
             <>
               <Link href="/startup/create">
