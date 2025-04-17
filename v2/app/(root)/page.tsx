@@ -1,15 +1,24 @@
-import React from "react";
+import SearchForm from "../../components/SearchForm";
 
-const Home = () => {
+const Home = async ({
+  searchParams,
+}: {
+  searchParams: Promise<{ query?: string }>;
+}) => {
+  const query = (await searchParams).query;
   return (
-    <div className=" p-56">
-      Home
-      <div className="p-6">
-        <h1 className="text-4xl font-extrabold font-work text-black">
-          Hello, Extra Bold Work Sans!
-        </h1>
-        <div className="heading">1</div>
-        <p className="font-light font-work mt-2">This is light Work Sans.</p>
+    <div>
+      <div>
+        <section className="pink_container pattern">
+          <h1 className="heading">
+            Pitch Your Startup, <br /> Connect with Entreprenuers
+          </h1>
+          <p className="sub-heading !max-w-3xl">
+            Submit Innovations, Vote on Pitches, and get Noticed
+          </p>
+
+          <SearchForm query={query} />
+        </section>
       </div>
     </div>
   );

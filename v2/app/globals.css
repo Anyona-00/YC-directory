@@ -43,7 +43,7 @@
   }
 
   .pink_container {
-    @apply w-full bg-pink-500 min-h-[32rem] py-10 px-6 flex justify-center items-center flex-col;
+    @apply w-full bg-pink-600 min-h-[32rem] py-10 px-6 flex justify-center items-center flex-col;
   }
 
   .tag {
@@ -192,39 +192,20 @@
   .category-tag {
     @apply font-medium text-base bg-pink-100 px-4 py-2 rounded-full;
   }
-}
 
-/* Pattern needs to be outside @layer as it contains non-Tailwind properties */
-.pattern {
-  background-image: linear-gradient(
-    to right,
-    transparent 49.5%,
-    rgba(251, 232, 67, 0.2) 49.5%,
-    rgba(251, 232, 67, 0.6) 50.5%,
-    transparent 50.5%
-  );
-  background-size: 5% 100%;
-  background-position: center;
-  background-repeat: repeat-x;
-}
+  .pattern {
+    @apply bg-[linear-gradient(to_right,transparent_45%,rgba(251,232,67,0.2)_45%,rgba(251,232,67,0.6)_50.5%,transparent_50.5%)] bg-[length:5%_100%] bg-center bg-repeat-x;
+  }
 
-/* Keep tag-tri utility with its pseudo-elements */
-.tag-tri::before {
-  content: "";
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  border-top: 10px solid black;
-  border-right: 10px solid transparent;
-}
+  /* Convert tag-tri to Tailwind utilities */
+  .tag-tri {
+    @apply relative before:content-[''] before:absolute before:top-2 before:left-2 before:border-t-[10px] before:border-t-black before:border-r-[10px] before:border-r-transparent after:content-[''] after:absolute after:bottom-2 after:right-2 after:border-b-[10px] after:border-b-black after:border-l-[10px] after:border-l-transparent;
+  }
 
-.tag-tri::after {
-  content: "";
-  position: absolute;
-  bottom: 0.5rem;
-  right: 0.5rem;
-  border-bottom: 10px solid black;
-  border-left: 10px solid transparent;
+  /* Tag class (already in Tailwind, included for completeness) */
+  .tag {
+    @apply bg-yellow-300 px-6 py-3 font-sans font-bold rounded-sm uppercase relative;
+  }
 }
 
 /* Keep editor toolbar styling separate */
