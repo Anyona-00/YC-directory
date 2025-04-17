@@ -20,7 +20,9 @@ const config: Config = {
           "100": "#FFE8F0",
           DEFAULT: "#EE2B69",
         },
+
         secondary: "#FBE843",
+
         black: {
           "100": "#333333",
           "200": "#141413",
@@ -33,7 +35,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        "work-sans": ["var(--font-work-sans)"],
+        work: ["'Work Sans'", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
